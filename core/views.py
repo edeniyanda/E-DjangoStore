@@ -7,7 +7,7 @@ def index(request):
 
     context = {
         "categories" : categories,
-        "items" : items
+        "items" : items,
     }
     return render(request, "core/index.html", context=context)
 
