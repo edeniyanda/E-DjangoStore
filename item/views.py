@@ -29,3 +29,8 @@ def newitem(request):
         "title" : "New Item",
     })
 
+@login_required
+def delete_item(request, pk):
+    item_to_delete = get_object_or_404(Item,pk=pk)
+    item_to_delete.delete()
+    return redirect("dashboard:dashboard_page")
