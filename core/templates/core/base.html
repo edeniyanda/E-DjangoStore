@@ -27,7 +27,7 @@
                     <a href="{% url 'core:signup_page' %}" class="text-sm font-medium text-white bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md">
                         Sign Up
                     </a>
-                    <a href="#" class="text-sm font-medium text-white bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md">
+                    <a href="{% url 'core:login_page' %}" class="text-sm font-medium text-white bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md">
                         Log In
                     </a>
                 </div>
@@ -45,9 +45,9 @@
         <div class="md:hidden" id="mobile-menu">
             <div class="pt-2 pb-3 space-y-1">
                 <a href="#" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-900 hover:bg-gray-50 hover:border-gray-300 hover:text-blue-600">New Item</a>
-                <a href="#" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-900 hover:bg-gray-50 hover:border-gray-300 hover:text-blue-600">Browse</a>
-                <a href="#" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white bg-green-500 hover:bg-green-600">Sign Up</a>
-                <a href="#" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white bg-gray-700 hover:bg-gray-800">Log In</a>
+                <a href="" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-900 hover:bg-gray-50 hover:border-gray-300 hover:text-blue-600">Browse</a>
+                <a href="{% url 'core:signup_page' %}" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white bg-green-500 hover:bg-green-600">Sign Up</a>
+                <a href="{% url 'core:login_page' %}" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white bg-gray-700 hover:bg-gray-800">Log In</a>
             </div>
         </div>
     </nav>
