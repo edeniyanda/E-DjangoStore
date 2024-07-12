@@ -9,7 +9,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {% for item in items %}
                 <div class="bg-white shadow rounded-lg overflow-hidden">
-                    <a href="{% url 'item:detail' item.id%}">
+                    <a href="{% url 'item:detail' item.id %}">
                         <img src="{{ item.image.url }}" alt="{{ item.title }}" class="w-full h-64 object-cover">
                         <div class="p-4">
                             <h2 class="text-xl font-semibold">{{ item.name }}</h2>

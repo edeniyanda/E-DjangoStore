@@ -6,7 +6,7 @@ from core.views import (index, contact)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('items/', include('item.urls')),
+    path('item/', include('item.urls')),
     path('', index, name="home_page"),
     path('contact/', contact, name="contact_page"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
