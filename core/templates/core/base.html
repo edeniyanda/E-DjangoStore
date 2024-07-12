@@ -37,7 +37,7 @@
                     <a href="{% url 'core:signup_page' %}" class="text-sm font-medium text-white bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md">
                         Inbox
                     </a>
-                    <a href="{% url 'core:login_page' %}" class="text-sm font-medium text-white bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md">
+                    <a href="{% url 'dashboard:dashboard_page' %}" class="text-sm font-medium text-white bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md">
                         Dashboard
                     </a>
                 </div>
@@ -62,7 +62,7 @@
                     <a href="{% url 'core:login_page' %}" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white bg-gray-700 hover:bg-gray-800">Log In</a>
                 {% else %}
                     <a href="{% url 'core:signup_page' %}" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white bg-green-500 hover:bg-green-600">Inbox</a>
-                    <a href="{% url 'core:login_page' %}" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white bg-gray-700 hover:bg-gray-800">Dashboard</a>
+                    <a href="{% url 'dashboard:dashboard_page' %}" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white bg-gray-700 hover:bg-gray-800">Dashboard</a>
                 {%endif%}
             </div>
         </div>
