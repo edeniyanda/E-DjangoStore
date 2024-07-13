@@ -31,19 +31,18 @@ def newitem(request):
 
 @login_required
 def edititem(request, pk):
-    item_to_edit = get_object_or_404(Item, pk=pk, created_by=request.user)
+    item = get_object_or_404(Item, pk=pk)
     if request.method == 'POST':
-        form = EditItemForm(request.POST, request.FILES, initial=item_to_edit)
-
+        print("Post rewuest made ")
+        form = EditItemForm(request.POST, request.FILES, instance=item)
         if form.is_valid():
             form.save()
-            return redirect('item:detail', pk=item_to_edit.id)
+            return redirect('item:detail', pk=item.pk)
     else:
-        form = EditItemForm(instance=item_to_edit)
-    return render(request, "item/form.html", {
-        "form" : form,
-        "title" : "Edit Item",
-    })
+        form = EditItemForm(instance=item)
+        print("Heelo")
+    return render(request, 'item/form.html', {'form': form, 'title': 'Edit Item'})
+
 
 @login_required
 def delete_item(request, pk):
