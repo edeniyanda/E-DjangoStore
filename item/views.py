@@ -11,6 +11,13 @@ def detail(request, pk):
         "related_items": related_items,
     })
 
+def itemsall(request):
+    items = Item.objects.filter(is_sold=False)
+
+    return render(request, "item/itemsall.html", {
+        "itemsall" : items
+    })
+
 @login_required
 def newitem(request):
     if request.method == 'POST':
