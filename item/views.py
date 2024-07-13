@@ -15,7 +15,7 @@ def itemsall(request):
     items = Item.objects.filter(is_sold=False)
 
     return render(request, "item/itemsall.html", {
-        "itemsall" : items
+        "items" : items
     })
 
 @login_required
